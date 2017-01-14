@@ -5,18 +5,16 @@
 <script>
 function sendValues() {
     // Sending and receiving data in JSON format using POST mothod
-//
-xhr = new XMLHttpRequest();
-var url = "127.0.0.0:8080/scheduler";
-xhr.open("POST", url, true);
-xhr.setRequestHeader("Content-type", "application/json");
-xhr.onreadystatechange = function () { 
+    xhr = new XMLHttpRequest();
+    var url = "127.0.0.0:8080/scheduler";
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.onreadystatechange = function () { 
     if (xhr.readyState == 4 && xhr.status == 200) {
         //var json = JSON.parse(xhr.responseText);
         //console.log(json.email + ", " + json.password)
     }
-}
-var data = JSON.stringify({"schedule":{"order":12,"appId":"1584987","credentials":{"user":"aaa","password":"ppp"},data{"date":"17.01.2017","time":"14:20","servicer":"A SERVICER","branch":"PE MARIBOR",}}}});
-xhr.send(data);
+    var data = JSON.stringify({"schedule":{"order":12,"appId":"1584987","credentials":{"user":"aaa","password":"ppp"},data{"date":"17.01.2017","time":"14:20","servicer":"A SERVICER","branch":"PE MARIBOR",}}}});
+    xhr.send(data);
 }
 </script>
