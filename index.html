@@ -7,7 +7,7 @@ function sendValues() {
     // Sending and receiving data in JSON format using POST mothod
 //
 xhr = new XMLHttpRequest();
-var url = "127.0.0.0/scheduler";
+var url = "127.0.0.0:8080/scheduler";
 xhr.open("POST", url, true);
 xhr.setRequestHeader("Content-type", "application/json");
 xhr.onreadystatechange = function () { 
